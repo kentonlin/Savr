@@ -1,15 +1,15 @@
 var Sequelize = require('sequelize');
 const db = require('../db');
 
-var Transaction = require('./transactions')
+var Transaction = require('./transactions');
+var Profile = require('./profile');
 
 var User = db.define('user', {
-  first_name: Sequelize.STRING,
-  last_name: Sequelize.STRING,
   username: Sequelize.STRING,
   password: Sequelize.STRING
 })
 
+// Profile.belongsTo(User);
 User.sync({force: true})
 
 
