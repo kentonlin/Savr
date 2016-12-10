@@ -16,6 +16,7 @@ var User = require('./models/user-accounts.js');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '/public/bundle')));
 app.use(express.static(path.join(__dirname, '/src')));
+app.use(express.static(path.join(__dirname, '/')));
 
 
 //Endpoint used to retrieve all user accounts in the database

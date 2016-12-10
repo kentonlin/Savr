@@ -14,7 +14,7 @@ var Transaction = db.define('transaction', {
 })
 
 // Transaction.belongsTo(User)
-Transaction.sync({force: true})
+// Transaction.sync({force: true})
 
 
 module.exports = Transaction;
