@@ -22,3 +22,20 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+App {
+  display: flex;
+  align-content: space-between;
+}
+
+.one {
+  display: flex;
+  background-color: skyblue;
+  height: 150px;
+}
+
+.three {
+  display: flex;
+  background-color: pink;
+  height: 250px;
+}

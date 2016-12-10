@@ -42,7 +42,6 @@ class App extends Component {
         <div className="panel_4"> Content Panel 3</div>
         <div className="panel_5"> Content Panel 4</div>
         <div className="panel_6"> Content Panel 5</div>
-        {this.props.children}
       </div>
     );
   }
