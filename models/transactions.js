@@ -13,7 +13,6 @@ var Transaction = db.define('transaction', {
   utilities: Sequelize.STRING
 })
 
-
 // Transaction.belongsTo(User)
 Transaction.sync({force: true})
 
