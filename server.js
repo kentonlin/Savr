@@ -125,6 +125,8 @@ app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/index.html'))
 })
 
+
+
 //If database is in sync, create port used to listen to url requests.
 db.sync()
 .then(() => {
