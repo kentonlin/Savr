@@ -19,6 +19,7 @@ class App extends Component {
               </Navbar.Brand>
             </Navbar.Header>
             <Nav>
+              <NavItem eventKey={1} href="/goal">Goal</NavItem>
               <NavItem eventKey={1} href="/#/">Profile</NavItem>
               <NavItem eventKey={2} href="/#/search">Recommendations</NavItem>
             </Nav>

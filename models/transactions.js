@@ -4,14 +4,15 @@ const db = require('../db');
 var User = require('./user-accounts.js');
 
 var Transaction = db.define('transaction', {
-  entertainment: Sequelize.STRING,
-  food: Sequelize.STRING,
-  other: Sequelize.STRING,
-  shopping: Sequelize.STRING,
-  transportation: Sequelize.STRING,
-  travel: Sequelize.STRING,
-  utilities: Sequelize.STRING
+  userId: Sequelize.STRING,
+  company: Sequelize.STRING,
+  price: Sequelize.DECIMAL(10,2),
+  dealCompany: Sequelize.STRING,
+  dealURL: Sequelize.STRING,
+  dealImage: Sequelize.STRING
 })
+
+Transaction.sync({force: true})
 
 // Transaction.belongsTo(User)
 // Transaction.sync({force: true})
