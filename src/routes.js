@@ -8,7 +8,7 @@ import Signup from './signup';
 // Nested in the Path are the children needed to change
 export default (
   <Route>
-  <Route path="/" component={App} />
-  <Route path="signup" component={Signup} />
+    <Route path="signup" component={Signup} />
+    <Route path="/" component={App} />
   </Route>
 );

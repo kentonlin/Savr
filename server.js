@@ -53,8 +53,8 @@ app.post('/api/user', (req, res) => {
 app.get('/api/transactions', (req, res) => {
   Transaction.findAll()
   .then((transaction) => {
-    res.send('Getting transactions')
-    // res.send(transaction)
+    // res.send('Getting transactions')
+    res.send(transaction)
   })
 })
 
@@ -63,19 +63,24 @@ app.get('/api/transactions/:id', (req, res) => {
   let id = req.params.id
   Transaction.findById(id)
   .then((transaction) => {
-    res.send('getting specific transactions')
-    // res.send(transaction)
+    // res.send('getting specific transactions')
+    res.send(transaction)
   })
 })
 
 app.post('/api/transactions', (req, res) => {
-  let id = req.body.id
-  let data = req.body.data
+  let data = req.body
   Transaction.create({
-    data: data
+    userId: data.id,
+    company: data.b,
+    price: data.c,
+    dealCompany: data.d,
+    deal_title: data.e,
+    dealURL: data.f,
+    dealImage: data.g
   })
   .then((transaction) => {
-    transaction.setUser(id)
+    // transaction.setUser(id)
     res.send('Transaction created')
   })
 })

@@ -13,7 +13,7 @@ var User = db.define('user', {
 // User.sync({force: true})
 
 
-// User.belongsToMany(Transaction, {through: 'userTransaction'})
-// Transaction.belongsToMany(User, {through: 'userTransaction'})
+User.belongsToMany(Transaction, {through: 'userTransaction'})
+Transaction.belongsToMany(User, {through: 'userTransaction'})
 
 module.exports = User;

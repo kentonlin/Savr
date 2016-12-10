@@ -3,7 +3,6 @@ import { Router, Route, Link, browserHistory } from 'react-router';
 import $ from 'jquery';
 import {Button, ButtonToolbar, Form, FormGroup, Col, FormControl, ControlLabel, Checkbox, Row, Grid} from 'react-bootstrap';
 
-
 export default class Signup extends React.Component {
   constructor(props) {
     super(props);
@@ -16,6 +15,7 @@ export default class Signup extends React.Component {
       phone: "",
       zipcode: 10001,
       email: ""
+
     };
   }
   render() {
@@ -27,7 +27,7 @@ export default class Signup extends React.Component {
               First Name
             </Col>
             <Col sm={10}>
-              <FormControl type="email" placeholder="Email" />
+              <FormControl type="email" placeholder="First Name" />
             </Col>
           </FormGroup>
           <FormGroup controlId="formHorizontalEmail">
@@ -35,7 +35,7 @@ export default class Signup extends React.Component {
               Last Name
             </Col>
             <Col sm={10}>
-              <FormControl type="email" placeholder="Email" />
+              <FormControl type="email" placeholder="Last Name" />
             </Col>
           </FormGroup>
           <FormGroup controlId="formHorizontalEmail">
@@ -43,7 +43,7 @@ export default class Signup extends React.Component {
               SSN
             </Col>
             <Col sm={10}>
-              <FormControl type="email" placeholder="Email" />
+              <FormControl type="email" placeholder="SSN" />
             </Col>
           </FormGroup>
           <FormGroup controlId="formHorizontalEmail">
@@ -51,7 +51,7 @@ export default class Signup extends React.Component {
               Address
             </Col>
             <Col sm={10}>
-              <FormControl type="email" placeholder="Email" />
+              <FormControl type="email" placeholder="Address" />
             </Col>
           </FormGroup>
           <FormGroup controlId="formHorizontalEmail">
@@ -59,7 +59,7 @@ export default class Signup extends React.Component {
               City
             </Col>
             <Col sm={10}>
-              <FormControl type="email" placeholder="Email" />
+              <FormControl type="email" placeholder="City" />
             </Col>
           </FormGroup>
           <FormGroup controlId="formHorizontalEmail">
@@ -67,7 +67,7 @@ export default class Signup extends React.Component {
               State Code
             </Col>
             <Col sm={10}>
-              <FormControl type="email" placeholder="Email" />
+              <FormControl type="email" placeholder="State Code" />
             </Col>
           </FormGroup>
           <FormGroup controlId="formHorizontalEmail">
@@ -75,7 +75,7 @@ export default class Signup extends React.Component {
               Postal Code
             </Col>
             <Col sm={10}>
-              <FormControl type="email" placeholder="Email" />
+              <FormControl type="email" placeholder="Postal Code" />
             </Col>
           </FormGroup>
           <FormGroup controlId="formHorizontalEmail">
@@ -83,15 +83,7 @@ export default class Signup extends React.Component {
               Country Code
             </Col>
             <Col sm={10}>
-              <FormControl type="email" placeholder="Email" />
-            </Col>
-          </FormGroup>
-          <FormGroup controlId="formHorizontalEmail">
-            <Col componentClass={ControlLabel} sm={2}>
-              Country Code
-            </Col>
-            <Col sm={10}>
-              <FormControl type="email" placeholder="Email" />
+              <FormControl type="email" placeholder="Country Code" />
             </Col>
           </FormGroup>
           <FormGroup controlId="formHorizontalEmail">
@@ -99,7 +91,7 @@ export default class Signup extends React.Component {
               DOB
             </Col>
             <Col sm={10}>
-              <FormControl type="email" placeholder="Email" />
+              <FormControl type="email" placeholder="DOB" />
             </Col>
           </FormGroup>
           <FormGroup controlId="formHorizontalEmail">
@@ -107,7 +99,7 @@ export default class Signup extends React.Component {
               Mobile Phone Number
             </Col>
             <Col sm={10}>
-              <FormControl type="email" placeholder="Email" />
+              <FormControl type="email" placeholder="Mobile Phone Number" />
             </Col>
           </FormGroup>
           <FormGroup controlId="formHorizontalEmail">
@@ -115,7 +107,7 @@ export default class Signup extends React.Component {
               Postal Code
             </Col>
             <Col sm={10}>
-              <FormControl type="email" placeholder="Email" />
+              <FormControl type="email" placeholder="Postal Code" />
             </Col>
           </FormGroup>
           <FormGroup controlId="formHorizontalEmail">
@@ -131,7 +123,7 @@ export default class Signup extends React.Component {
               Driver License
             </Col>
             <Col sm={10}>
-              <FormControl type="email" placeholder="Email" />
+              <FormControl type="email" placeholder="Driver License" />
             </Col>
           </FormGroup>
           <FormGroup controlId="formHorizontalEmail">
@@ -139,7 +131,7 @@ export default class Signup extends React.Component {
               Driver License Issue Location
             </Col>
             <Col sm={10}>
-              <FormControl type="email" placeholder="Email" />
+              <FormControl type="email" placeholder="Driver License Issue Location" />
             </Col>
           </FormGroup>
           <FormGroup controlId="formHorizontalEmail">
@@ -147,7 +139,7 @@ export default class Signup extends React.Component {
               Driver License Issue Date
             </Col>
             <Col sm={10}>
-              <FormControl type="email" placeholder="Email" />
+              <FormControl type="email" placeholder="Driver License Issue Date" />
             </Col>
           </FormGroup>
           <FormGroup controlId="formHorizontalEmail">
@@ -155,7 +147,7 @@ export default class Signup extends React.Component {
               Driver License Expiration Date
             </Col>
             <Col sm={10}>
-              <FormControl type="email" placeholder="Email" />
+              <FormControl type="email" placeholder="Driver License Expiration Date" />
             </Col>
           </FormGroup>
           <FormGroup controlId="formHorizontalEmail">
@@ -163,7 +155,7 @@ export default class Signup extends React.Component {
               Third Party User ID
             </Col>
             <Col sm={10}>
-              <FormControl type="email" placeholder="Email" />
+              <FormControl type="email" placeholder="Third Party User ID" />
             </Col>
           </FormGroup>
         </Form>
