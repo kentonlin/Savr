@@ -13,8 +13,9 @@ var Transaction = db.define('transaction', {
   utilities: Sequelize.STRING
 })
 
-Transaction.belongsTo(User)
+// Transaction.belongsTo(User)
 Transaction.sync({force: true})
+
 
 module.exports = Transaction;
 //Note to self: Create an associating between the user and transaction tables.

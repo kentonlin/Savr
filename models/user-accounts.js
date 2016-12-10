@@ -9,7 +9,8 @@ var User = db.define('user', {
   password: Sequelize.STRING
 })
 
-// User.sync({force: true})
+// Profile.belongsTo(User);
+User.sync({force: true})
 
 
 // User.belongsToMany(Transaction, {through: 'userTransaction'})

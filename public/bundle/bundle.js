@@ -65,6 +65,12 @@
 	
 	var _App2 = _interopRequireDefault(_App);
 	
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./index.css\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"bootstrap/dist/css/bootstrap.css\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"bootstrap/dist/css/bootstrap-theme.css\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	_reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById('root'));
@@ -21480,7 +21486,7 @@
 /* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -21491,6 +21497,14 @@
 	var _react = __webpack_require__(2);
 	
 	var _react2 = _interopRequireDefault(_react);
+	
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./App.css\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	
+	var _reactBootstrap = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"react-bootstrap\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	
+	var _classnames = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"classnames\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -21510,31 +21524,86 @@
 	  }
 	
 	  _createClass(App, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "div",
-	        { className: "App" },
+	        'div',
+	        { className: 'App' },
 	        _react2.default.createElement(
-	          "div",
-	          { className: "App-header" },
-	          _react2.default.createElement("img", { src: logo, className: "App-logo", alt: "logo" }),
+	          _reactBootstrap.Navbar,
+	          null,
 	          _react2.default.createElement(
-	            "h2",
+	            _reactBootstrap.Navbar.Header,
 	            null,
-	            "Welcome to React"
+	            _react2.default.createElement(
+	              _reactBootstrap.Navbar.Brand,
+	              null,
+	              _react2.default.createElement(
+	                'a',
+	                { href: '/' },
+	                'Savr'
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            _reactBootstrap.Nav,
+	            null,
+	            _react2.default.createElement(
+	              _reactBootstrap.NavItem,
+	              { eventKey: 1, href: '/#/' },
+	              'Profile'
+	            ),
+	            _react2.default.createElement(
+	              _reactBootstrap.NavItem,
+	              { eventKey: 2, href: '/#/search' },
+	              'Recommendations'
+	            )
+	          )
+	        ),
+	        _react2.default.createElement('img', { src: 'https://support.sas.com/kb/40/addl/fusion_40176_1_g40176.gif', alt: 'Paris', width: '400', height: '300' }),
+	        _react2.default.createElement(
+	          _reactBootstrap.Grid,
+	          null,
+	          _react2.default.createElement(
+	            _reactBootstrap.Row,
+	            { className: 'show-grid' },
+	            _react2.default.createElement(
+	              _reactBootstrap.Col,
+	              { className: 'panel_2', md: 6, mdPush: 6 },
+	              ' Content Panel 2'
+	            ),
+	            _react2.default.createElement(
+	              _reactBootstrap.Col,
+	              { className: 'panel_1', md: 6, mdPull: 6 },
+	              ' Content Panel 1'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            _reactBootstrap.Row,
+	            { className: 'show-grid' },
+	            _react2.default.createElement(_reactBootstrap.Col, { xs: 6, md: 4 }),
+	            _react2.default.createElement(
+	              _reactBootstrap.Col,
+	              { className: 'panel_3', xs: 6, md: 4 },
+	              'Content Panel 3'
+	            ),
+	            _react2.default.createElement(_reactBootstrap.Col, { xsHidden: true, md: 4 })
 	          )
 	        ),
 	        _react2.default.createElement(
-	          "p",
-	          { className: "App-intro" },
-	          "To get started, edit ",
-	          _react2.default.createElement(
-	            "code",
-	            null,
-	            "src/App.js"
-	          ),
-	          " and save to reload."
+	          'div',
+	          { className: 'panel_4' },
+	          ' Content Panel 3'
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'panel_5' },
+	          ' Content Panel 4'
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'panel_6' },
+	          ' Content Panel 5'
 	        )
 	      );
 	    }
