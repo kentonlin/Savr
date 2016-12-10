@@ -32,7 +32,7 @@ class App extends Component {
                 transaction content
               </Panel>
             </div>
-
+        {this.props.children}
         </div>
       </div>
     );
