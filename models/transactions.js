@@ -1,6 +1,8 @@
 var Sequelize = require('sequelize');
 const db = require('../db');
 
+var User = require('./user-accounts.js');
+
 var Transaction = db.define('transaction', {
   entertainment: Sequelize.STRING,
   food: Sequelize.STRING,
@@ -11,7 +13,9 @@ var Transaction = db.define('transaction', {
   utilities: Sequelize.STRING
 })
 
-// Transaction.sync({force: true})
+// Transaction.belongsTo(User)
+Transaction.sync({force: true})
+
 
 module.exports = Transaction;
 //Note to self: Create an associating between the user and transaction tables.
