@@ -1,34 +1,41 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.panel_1 {
-  width: 300px;
-  height: 300px;
-  background-color: red;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.col_2 {
+  width: 100px;
+}
+.panel {
+  width: 600px;
+  height: 400px;
 }
 
-.panel_2 {
-  width: 300px;
-  height: 300px;
-  background-color: blue;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.body {
+  background-color:lightgrey;
 }
-.panel_3 {
-  width: 300px;
-  height: 300px;
-  background-color: green;
+
+.panels {
   display: -webkit-flex;
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+
+.dash {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 70px;
+  font-family: 'Open Sans', sans-serif;
+}
+.desc {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 73px;
+  font-family: 'Open Sans', sans-serif;
+}
+.expenses{
+
 }

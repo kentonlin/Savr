@@ -19,7 +19,6 @@ app.use(express.static(path.join(__dirname, '/src')));
 app.use(express.static(path.join(__dirname, '/')));
 app.use(express.static(path.join(__dirname, '/b3/b3')));
 
-
 //Endpoint used to retrieve all user accounts in the database
 app.get('/api/user', (req, res) => {
   User.findAll()
@@ -93,9 +92,9 @@ app.get('/api/recommendations', (req, res) => {
 app.get('/api/profile', (req, res) => {
   Profile.findAll()
   .then((profiles) => {
-    res.send(profiles)
-  })
-})
+    res.send(profiles);
+  });
+});
 
 app.get('/api/profile/:id', (req, res) => {
   var id = req.params.id
@@ -138,4 +137,4 @@ db.sync()
   app.listen(3000, () => {
     console.log('server is running on port 3000')
   })
-})
+});
