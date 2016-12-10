@@ -17,6 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '/public/bundle')));
 app.use(express.static(path.join(__dirname, '/src')));
 app.use(express.static(path.join(__dirname, '/')));
+app.use(express.static(path.join(__dirname, '/b3/b3')));
 
 //Endpoint used to retrieve all user accounts in the database
 app.get('/api/user', (req, res) => {
@@ -119,7 +120,11 @@ app.post('/api/profile', (req, res) => {
     res.send('Profile successfully created')
   })
 })
-//
+
+app.get('/goal', (req, res) => {
+  res.sendFile(path.join(__dirname, '/b3/b3/b3.html'))
+})
+
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/index.html'))
 })
