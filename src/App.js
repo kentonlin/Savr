@@ -20,14 +20,6 @@ class App extends Component {
         </Navbar>
         <img src="https://support.sas.com/kb/40/addl/fusion_40176_1_g40176.gif" alt="Paris" width="400" height="300"/>
         <Grid>
-          {/* <Row className="show-grid">
-            <Col xs={12} md={8}><code>&lt;{'Col xs={12} md={8}'} /&gt;</code></Col>
-            <Col xs={6} md={4}><code>&lt;{'Col xs={6} md={4}'} /&gt;</code></Col>
-          </Row>
-
-          <Row className="show-grid">
-            <Col xs={6} xsOffset={6}><code>&lt;{'Col xs={6} xsOffset={6}'} /&gt;</code></Col>
-          </Row> */}
 
           <Row className="show-grid">
             <Col className="panel_2" md={6} mdPush={6}> Content Panel 2</Col>
