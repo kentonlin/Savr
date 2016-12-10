@@ -8,6 +8,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 
 //imports the models for each database table
+var Profile = require('./models/profile.js');
 var Recommendation = require('./models/recommendations.js');
 var Transaction = require('./models/transactions.js');
 var User = require('./models/user-accounts.js');
@@ -23,7 +24,6 @@ app.get('/api/user', (req, res) => {
   .then((data) => {
     res.send(data)
   })
-  console.log('Getting data')
 })
 
 //Endpoint used to retrieve data on a specific user account
@@ -31,8 +31,7 @@ app.get('/api/user/:id', (req, res) => {
   let id = req.params.id
   User.findById(id)
   .then((user) => {
-    res.send('fetching user')
-    // res.send(user)
+    res.send(user)
   })
 })
 
@@ -68,12 +67,56 @@ app.get('/api/transactions/:id', (req, res) => {
   })
 })
 
+app.post('/api/transactions', (req, res) => {
+  let id = req.body.id
+  let data = req.body.data
+  Transaction.create({
+    data: data
+  })
+  .then((transaction) => {
+    transaction.setUser(id)
+    res.send('Transaction created')
+  })
+})
+
 //Endpoint used to retrieve user recommendations from the database
 app.get('/api/recommendations', (req, res) => {
   Recommendation.findAll()
   .then((recommendations) => {
     res.send('Fetching recommendations')
     // res.send(recommendations)
+  })
+})
+
+app.get('/api/profile', (req, res) => {
+  Profile.findAll()
+  .then((profiles) => {
+    res.send(profiles)
+  })
+})
+
+app.get('/api/profile/:id', (req, res) => {
+  var id = req.params.id
+  Profile.findById()
+  .then((profile) => {
+    res.send(profile)
+  })
+})
+
+app.post('/api/profile', (req, res) => {
+  var info = req.body
+  Profile.create({
+    first_name: info.first_name,
+    last_name: info.last_name,
+    age: info.age,
+    sex: info.sex,
+    occupation: info.occupation,
+    income: info.income,
+    address: info.address,
+    zipcode: info.zip
+  })
+  .then((profile) => {
+    res.send('Profile successfully created')
   })
 })
 
