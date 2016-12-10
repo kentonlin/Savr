@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import { Navbar, Nav, NavItem, Row, Col, Grid } from 'react-bootstrap';
 import classnames from 'classnames';
 
@@ -22,8 +21,8 @@ class App extends Component {
         <Grid>
 
           <Row className="show-grid">
-            <Col className="panel_2" md={6} mdPush={6}> Content Panel 2</Col>
-            <Col className="panel_1" md={6} mdPull={6}> Content Panel 1</Col>
+            <Col className="panel_2" md={6} mdPush={6}> Recommendations</Col>
+            <Col className="panel_1" md={6} mdPull={6}> Recent Transactions</Col>
           </Row>
           <Row className="show-grid">
             <Col xs={6} md={4}></Col>
