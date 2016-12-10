@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+// import './App.css';
 import { Navbar, Nav, NavItem, Row, Col, Grid } from 'react-bootstrap';
 import classnames from 'classnames';
 

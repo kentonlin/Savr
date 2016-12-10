@@ -14,7 +14,7 @@ var Profile = db.define('profile', {
   zipcode: Sequelize.INTEGER
 })
 
-Profile.belongsTo(User);
-Profile.sync({force: true})
+// Profile.belongsTo(User);
+// Profile.sync({force: true})
 
 module.exports = Profile;
