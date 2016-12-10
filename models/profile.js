@@ -15,6 +15,6 @@ var Profile = db.define('profile', {
 })
 
 Profile.belongsTo(User);
-Profile.sync({force: true})
+// Profile.sync({force: true})
 
 module.exports = Profile;

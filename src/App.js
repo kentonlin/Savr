@@ -1,38 +1,39 @@
 import React, { Component } from 'react';
-import { Navbar, Nav, NavItem, Row, Col, Grid } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, Row, Col, Grid, Panel } from 'react-bootstrap';
 import classnames from 'classnames';
+import { Button } from 'bulma-react'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Navbar>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <a href="/">Savr</a>
-            </Navbar.Brand>
-          </Navbar.Header>
-          <Nav>
-            <NavItem eventKey={1} href="/#/">Profile</NavItem>
-            <NavItem eventKey={2} href="/#/search">Recommendations</NavItem>
-          </Nav>
-        </Navbar>
-        <img src="https://support.sas.com/kb/40/addl/fusion_40176_1_g40176.gif" alt="Paris" width="400" height="300"/>
-        <Grid>
 
-          <Row className="show-grid">
-            <Col className="panel_2" md={6} mdPush={6}> Recommendations</Col>
-            <Col className="panel_1" md={6} mdPull={6}> Recent Transactions</Col>
-          </Row>
-          <Row className="show-grid">
-            <Col xs={6} md={4}></Col>
-            <Col className="panel_3"xs={6} md={4}>Content Panel 3</Col>
-            <Col xsHidden md={4}></Col>
-          </Row>
-        </Grid>
-        <div className="panel_4"> Content Panel 3</div>
-        <div className="panel_5"> Content Panel 4</div>
-        <div className="panel_6"> Content Panel 5</div>
+      <div className="App">
+          <h1 className="dash"> DASHBOARD </h1>
+          <div className="desc"> View Your Budget Categories </div>
+          <br />
+        <div className="body">
+          <Navbar className="nav">
+            <Navbar.Header>
+              <Navbar.Brand>
+                <a href="/">Savr</a>
+              </Navbar.Brand>
+            </Navbar.Header>
+            <Nav>
+              <NavItem eventKey={1} href="/#/">Profile</NavItem>
+              <NavItem eventKey={2} href="/#/search">Recommendations</NavItem>
+            </Nav>
+          </Navbar>
+          <img src="https://support.sas.com/kb/40/addl/fusion_40176_1_g40176.gif" alt="Paris" width="400" height="300"/>
+            <div className="panels">
+              <Panel className="panel" header="Recent Expenses">
+                Panel content
+              </Panel>
+              <Panel className="panel2" header="Recent Transactions">
+                transaction content
+              </Panel>
+            </div>
+
+        </div>
       </div>
     );
   }

@@ -10,7 +10,7 @@ var User = db.define('user', {
 })
 
 // Profile.belongsTo(User);
-User.sync({force: true})
+// User.sync({force: true})
 
 
 // User.belongsToMany(Transaction, {through: 'userTransaction'})

@@ -16,6 +16,8 @@ var User = require('./models/user-accounts.js');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '/public/bundle')));
 app.use(express.static(path.join(__dirname, '/src')));
+app.use(express.static(path.join(__dirname, '/')));
+
 
 
 //Endpoint used to retrieve all user accounts in the database
@@ -119,7 +121,7 @@ app.post('/api/profile', (req, res) => {
     res.send('Profile successfully created')
   })
 })
-
+//
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/index.html'))
 })
@@ -130,4 +132,4 @@ db.sync()
   app.listen(3000, () => {
     console.log('server is running on port 3000')
   })
-}); 
+});
